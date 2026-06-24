@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Kreator - VidioPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <nav class="bg-gray-800 border-b border-gray-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-indigo-400">VidioPro</a>
+            <span class="text-xs text-yellow-500 bg-yellow-950 px-3 py-1 rounded-full">Secure Checkout</span>
+        </div>
+    </nav>
+
+    <main class="container mx-auto my-8 p-4 max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Kolom Kiri: Form Data -->
+        <div class="md:col-span-2 bg-gray-800 p-6 rounded-xl border border-gray-700">
+            <h2 class="text-xl font-bold mb-4 text-indigo-400">Formulir Pemesanan Kilat</h2>
+            
+            <form onsubmit="window.location.href='client-dashboard.html'; return false;" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-gray-400 mb-1">Nama Lengkap Klien</label>
+                    <input type="text" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 text-sm" value="Rian & Sisi">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Nomor WhatsApp (Untuk Notifikasi)</label>
+                        <input type="tel" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 text-sm" placeholder="08xxxxx">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">Tanggal Event</label>
+                        <input type="date" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-400 mb-1">Lokasi Detail / Nama Hotel</label>
+                    <textarea required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 text-sm h-20" placeholder="Contoh: Ballroom Hotel Grand Mercure Solo Baru"></textarea>
+                </div>
+                
+                <div class="pt-4 border-t border-gray-700">
+                    <h3 class="text-sm font-semibold mb-2">Metode Pembayaran (Simulasi Midtrans/Xendit)</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="border border-indigo-600 bg-indigo-950/40 p-3 rounded-lg flex items-center gap-3 cursor-pointer">
+                            <input type="radio" name="payment" checked>
+                            <span class="text-xs font-medium">Virtual Account (VA)</span>
+                        </label>
+                        <label class="border border-gray-700 p-3 rounded-lg flex items-center gap-3 cursor-pointer opacity-50">
+                            <input type="radio" name="payment" disabled>
+                            <span class="text-xs font-medium">QRIS (Otomatis)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-lg text-sm transition mt-4">
+                    Bayar Sekarang & Konfirmasi Pesanan
+                </button>
+            </form>
+        </div>
+
+        <!-- Kolom Kanan: Ringkasan Invoice -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 h-fit space-y-4">
+            <h3 class="font-bold border-b border-gray-700 pb-2">Rincian Paket</h3>
+            <div class="text-xs space-y-2">
+                <p class="flex justify-between"><span>Kreator:</span> <span class="font-medium text-gray-200">Dimas Setiawan</span></p>
+                <p class="flex justify-between"><span>Paket:</span> <span class="font-medium text-gray-200">Wedding Teaser 1 Menit</span></p>
+                <p class="flex justify-between"><span>Batas Maks. Revisi:</span> <span class="font-medium text-red-400 font-bold">3 Kali</span></p>
+                <hr class="border-gray-700 my-2">
+                <p class="flex justify-between text-sm font-bold"><span>Total Biaya:</span> <span class="text-green-400">Rp 2.500.000</span></p>
+            </div>
+            <div class="bg-gray-900 p-3 rounded-lg border border-gray-700">
+                <p class="text-[11px] text-gray-400 italic">💡 **Split Payment System:** Rp 2.250.000 (Hak Kreator) & Rp 250.000 (Komisi Platform/Hotel) otomatis terbagi saat transaksi selesai.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
