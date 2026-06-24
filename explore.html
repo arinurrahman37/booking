@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Kreator Profesional - VidioPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 border-b border-gray-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-indigo-400">VidioPro</a>
+            <a href="index.html" class="text-sm text-gray-400 hover:text-white">← Kembali</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto my-8 p-4">
+        <h2 class="text-3xl font-bold mb-6">Pilih Kreator Sesuai Kebutuhan</h2>
+
+        <!-- Filter Bar -->
+        <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 flex flex-wrap gap-4 items-center mb-8">
+            <div class="flex flex-col">
+                <label class="text-xs text-gray-400 mb-1">Kategori Event</label>
+                <select class="bg-gray-900 border border-gray-700 text-sm rounded-lg p-2 text-gray-200">
+                    <option>Pernikahan / Wedding</option>
+                    <option>Corporate Event</option>
+                    <option>Product Commercial</option>
+                </select>
+            </div>
+            <div class="flex flex-col">
+                <label class="text-xs text-gray-400 mb-1">Ketersediaan Kota</label>
+                <select class="bg-gray-900 border border-gray-700 text-sm rounded-lg p-2 text-gray-200">
+                    <option>Surakarta (Solo)</option>
+                    <option>Sukoharjo</option>
+                    <option>Yogyakarta</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Grid List Kreator -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 flex flex-col justify-between">
+                <div class="aspect-video bg-gray-700 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-xs text-gray-400">[Thumbnail Portofolio Video]</div>
+                </div>
+                <div class="p-5 space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg">Dimas Setiawan</h3>
+                            <p class="text-xs text-indigo-400 font-medium">Spesialis Cinematic Wedding</p>
+                        </div>
+                        <span class="bg-gray-900 text-yellow-400 text-xs px-2 py-1 rounded font-bold">★ 4.9</span>
+                    </div>
+                    <p class="text-xs text-gray-400 line-clamp-2">Berpengalaman lebih dari 5 tahun menangani video dokumenter dan pesta pernikahan adat maupun modern.</p>
+                    <div class="border-t border-gray-700 pt-3 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-gray-400 block">Mulai dari</span>
+                            <span class="text-base font-bold text-green-400">Rp 2.500.000</span>
+                        </div>
+                        <a href="booking.html" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold py-2 px-4 rounded-lg transition">
+                            Booking Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 opacity-60">
+                <div class="aspect-video bg-gray-700 flex items-center justify-center text-xs text-gray-400">[Thumbnail Portofolio Video]</div>
+                <div class="p-5">
+                    <h3 class="font-bold text-lg">Aris Nugroho</h3>
+                    <p class="text-xs text-indigo-400 mb-2">Commercial & Company Profile</p>
+                    <p class="text-xs text-gray-400 mb-4">Mulai dari <span class="text-green-400 font-bold">Rp 4.000.000</span></p>
+                    <button class="w-full bg-gray-700 text-gray-400 cursor-not-allowed text-xs py-2 rounded-lg" disabled>Penuh (Booked)</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
